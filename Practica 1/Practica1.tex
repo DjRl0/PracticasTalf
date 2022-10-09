@@ -1,0 +1,94 @@
+\documentclass{article}
+% pre\'ambulo
+
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,activeacute]{babel}
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage[a5paper,margin=1in,top=15mm,bottom=15mm,landscape]{geometry} 
+
+\title{\textbf{Pr\'actica 1}}
+\author{\\Diego Jes\'us Romero Luque}
+\date{\today}
+
+
+\begin{document}
+\maketitle
+\pagebreak
+
+% cuerpo del documento
+\begin{enumerate}
+    \item \textbf{R$^3$ of R = $ \{(1,1),(1,2),(2,3),(3,4)\}$}\\
+        R \space \space =
+        $\begin{pmatrix}
+            1 & 0 & 0 & 0\\
+            1 & 0 & 0 & 0\\
+            0 & 1 & 0 & 0\\
+            0 & 0 & 1 & 0
+        \end{pmatrix}$, 
+        R$^3$ = R x R x R $\rightarrow$
+        R$^3$ =
+        $\begin{pmatrix}
+            1 & 0 & 0 & 0\\
+            1 & 0 & 0 & 0\\
+            0 & 1 & 0 & 0\\
+            0 & 0 & 1 & 0
+        \end{pmatrix}$ x
+        $\begin{pmatrix}
+            1 & 0 & 0 & 0\\
+            1 & 0 & 0 & 0\\
+            0 & 1 & 0 & 0\\
+            0 & 0 & 1 & 0
+        \end{pmatrix}$ x
+        $\begin{pmatrix}
+            1 & 0 & 0 & 0\\
+            1 & 0 & 0 & 0\\
+            0 & 1 & 0 & 0\\
+            0 & 0 & 1 & 0
+        \end{pmatrix}$,\\\\\\
+        R$^3$ = 
+        $\begin{pmatrix}
+            1 & 0 & 0 & 0\\
+            1 & 0 & 0 & 0\\
+            1 & 0 & 0 & 0\\
+            0 & 1 & 0 & 0
+        \end{pmatrix}$ x
+        $\begin{pmatrix}
+            1 & 0 & 0 & 0\\
+            1 & 0 & 0 & 0\\
+            0 & 1 & 0 & 0\\
+            0 & 0 & 1 & 0
+        \end{pmatrix}$ =
+        $\begin{pmatrix}
+            1 & 0 & 0 & 0\\
+            1 & 0 & 0 & 0\\
+            1 & 0 & 0 & 0\\
+            1 & 0 & 0 & 0
+        \end{pmatrix}$
+        \\\\
+        The result is: R$^3$ = $\{(1,1),(1,2),(1,3),(1,4)\}$ and we can check it with the \textit{powerrelation.m} script:
+        \begin{verbatim}
+            octave:8> powerrelation({['1','1'],['1','2'],['2','3'],['3','4']},3)
+            ans =
+                {
+                 [1,1] = 11
+                 [1,2] = 12
+                 [1,3] = 13
+                 [1,4] = 14
+                }
+
+        \end{verbatim}
+        
+
+    \pagebreak
+    \item Find a .tex file that contains \textbackslash usepackage\{amsthm,amsmath\}  
+    \begin{verbatim}
+        $ cd files/
+        $ grep -n -F "\usepackage{amsthm, amsmath}" *.tex
+    \end{verbatim}
+        The output of the command is:
+        \begin{verbatim}     mainP.tex:6:\usepackage{amsthm, amsmath} \end{verbatim}
+        Indicating the string \textit{\textbackslash usepackage\{amsthm,amsmath\}} was found in the line number 6 of the .tex file called \textit{mainP.tex}
+\end{enumerate}
+\end{document}
