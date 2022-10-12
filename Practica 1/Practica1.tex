@@ -67,7 +67,8 @@
             1 & 0 & 0 & 0
         \end{pmatrix}$
         \\\\
-        The result is: R$^3$ = $\{(1,1),(1,2),(1,3),(1,4)\}$ and we can check it with the \textit{powerrelation.m} script:
+        El resultado es: R$^3$ = $\{(1,1),(1,2),(1,3),(1,4)\}$ y podemos comprobarlo con el script 
+        \textit{powerrelation.m} :
         \begin{verbatim}
             octave:8> powerrelation({['1','1'],['1','2'],['2','3'],['3','4']},3)
             ans =
@@ -82,13 +83,18 @@
         
 
     \pagebreak
-    \item Find a .tex file that contains \textbackslash usepackage\{amsthm,amsmath\}  
-    \begin{verbatim}
-        $ cd files/
-        $ grep -n -F "\usepackage{amsthm, amsmath}" *.tex
-    \end{verbatim}
-        The output of the command is:
-        \begin{verbatim}     mainP.tex:6:\usepackage{amsthm, amsmath} \end{verbatim}
-        Indicating the string \textit{\textbackslash usepackage\{amsthm,amsmath\}} was found in the line number 6 of the .tex file called \textit{mainP.tex}
-\end{enumerate}
+    \item \textbf{Within the folder "files", find a TEX file in whose content appears 
+           the string "\textbackslash usepackage\{amsthm, amsmath\}".}
+        \begin{verbatim}
+            $ cd files/
+            $ grep -n -F "\usepackage{amsthm, amsmath}" *.tex
+            mainP.tex:6:\usepackage{amsthm, amsmath} 
+        \end{verbatim}
+        \textbf{Consideremos $L=\{w\in \{a,b\}^* : w \textnormal{ no termina en } ab\}$. Un expresión 
+         regular que genera L es:} \\
+            \begin{equation*}
+                L=\{w \in \{a,b\}^* : w=(a+b)^*(aa+ba+bb)\}
+            \end{equation*}
+    
+    \end{enumerate}
 \end{document}
