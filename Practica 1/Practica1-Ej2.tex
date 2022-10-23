@@ -1,0 +1,36 @@
+\documentclass{article}
+% pre\'ambulo
+
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,activeacute]{babel}
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage[a5paper,margin=1in,top=15mm,bottom=15mm,landscape]{geometry} 
+
+\title{\textbf{Pr\'actica 1}}
+\author{\\Diego Jes\'us Romero Luque}
+\date{\today}
+
+
+\begin{document}
+\maketitle
+\pagebreak
+
+% cuerpo del documento
+\begin{enumerate}
+    \item \textbf{Within the folder "files", find a TEX file in whose content appears 
+           the string "\textbackslash usepackage\{amsthm, amsmath\}".}
+        \begin{verbatim}
+            $ cd files/
+            $ grep -n -F "\usepackage{amsthm, amsmath}" *.tex
+            mainP.tex:6:\usepackage{amsthm, amsmath} 
+        \end{verbatim}
+        \textbf{Consideremos $L=\{w\in \{a,b\}^* : w \textnormal{ no termina en } ab\}$. Un expresión 
+         regular que genera L es:} \\
+            \begin{equation*}
+                L=\{w \in \{a,b\}^* : w=(a+b)^*(aa+ba+bb)\}
+            \end{equation*}
+    
+    \end{enumerate}
+\end{document}
