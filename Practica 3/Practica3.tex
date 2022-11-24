@@ -7,8 +7,7 @@
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage[a5paper,margin=1in,top=15mm,bottom=15mm,landscape]{geometry} 
-
-
+\usepackage{whilecode2}
 
 
 \graphicspath{ {./imagenes/} }
@@ -27,28 +26,21 @@
     \begin{center}
       $<$$<\pi^1_1|\sigma(\pi^3_3)>|\sigma(\pi^4_4)>$
     \end{center}
-        
+    \pagebreak
   \item Implement a WHILE program that computes the sum of three values. You
    must use an auxiliary variable that accumulates the result of the sum.\\
-        $X4:=X1\\
-        WHILE$ $X2 \not =  0$ $do\\
-            X4:=X4+1\\
-            X2:=X2-1\\
-        od\\
-        WHILE$ $X3 \not =  0$ $do\\
-        X4:=X4+1\\
-        X3:=X3-1\\
-        od\\
-        WHILE$ $X1 \not =  0$ $do\\
-            X4:=X4+1\\
-            X1:=X1-1\\
-        od\\
-        X1:=X4$
-
+   \whileprogram{Q}{3}{
+    \DefaultVar{4}\Assig\DefaultVar{1}\;
+    \While{$X_2 \not = 0$}{
+     $X_4 \Assig X_4 + 1$\;
+     $X_2 \Assig X_2 - 1$\;
+    }
+    \While{$X_3 \not = 0$}{
+      $X_4 \Assig X_4 + 1$\;
+      $X_3 \Assig X_3 - 1$\;
+    }
+    \DefaultVar{1}\Assig\DefaultVar{4}\;
+  }{s}
 \end{enumerate}
-
-\pagebreak
-
-
 
 \end{document}
